@@ -1,0 +1,23 @@
+<section class="admin__page-section" id="personal-tax-id-content">
+     <div class="admin__page-section-title">
+          <span class="title"><?= $block->escapeHtml(__('Custom Field Information')) ?></span>
+     </div>
+     <div class="admin__page-section-content">
+          <div id="personal-tax-id">
+               <strong><?= __('Personal Tax Id') ?>: </strong>
+               <span><?= $block->getPersonalTaxId() ?></span>
+          </div>
+          <div id="reference-number">
+               <strong><?= __('Reference Number') ?>: </strong>
+               <?= $block->getReferenceNumber() ?>
+          </div>
+     </div>
+</section>
+<script type="text/javascript">
+     require(
+          ['jquery'],
+          function($) {
+               $('#personal-tax-id-content').insertAfter($('.order-view-billing-shipping'));
+          }
+     );
+</script>
